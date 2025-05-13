@@ -1,0 +1,50 @@
+Exercise programs on Python Script.
+ (a)  Implement Python Script to generate first N natural numbers.
+ 
+N = int(input("Enter a number: "))
+for i in range(1, N + 1):
+    print(i, end=" ")
+
+(b)  Implement Python Script to check given number is palindrome or not.
+
+num = input("Enter a number: ")
+if num == num[::-1]:
+    print("Palindrome")
+else:
+    print("Not a palindrome")
+    
+ (c)  Implement Python script to print factorial of a number.
+ 
+num = int(input("Enter a number: "))
+factorial = 1
+for i in range(1, num + 1):
+    factorial *= i
+print("Factorial:", factorial)
+
+(d)  Implement Python Script to print sum of N natural numbers.
+
+N = int(input("Enter a number: "))
+total = sum(range(1, N + 1))
+print("Sum of first", N, "natural numbers is:", total) 
+
+(e)  Implement Python Script to check given number is Armstrong or not.
+
+num = int(input("Enter a number: "))
+order = len(str(num))
+sum_of_powers = sum(int(digit) ** order for digit in str(num))
+
+if num == sum_of_powers:
+    print("Armstrong number")
+else:
+    print("Not an Armstrong number")  
+    
+(f)   Implement Python Script to generate prime numbers series up to n.
+
+n = int(input("Enter upper limit: "))
+print("Prime numbers up to", n, "are:")
+for num in range(2, n + 1):
+    for i in range(2, int(num ** 0.5) + 1):
+        if num % i == 0:
+            break
+    else:
+        print(num, end = " ")
